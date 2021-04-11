@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Models\Empleat;
+use App\Models\ong;
 
-class ControladorEmpleat extends Controller
+class ControladorONG extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class ControladorEmpleat extends Controller
      */
     public function index()
     {
-        $empleat = Empleat::all();
-        return view('empleat.index', compact('empleat'));
+        $ong = ong::all();
+        return view('ongs.index', compact('ong'));
     }
 
     /**
@@ -26,7 +26,7 @@ class ControladorEmpleat extends Controller
      */
     public function create()
     {
-        return view('empleat.crea');
+        return view('ongs.crea');
     }
 
     /**
@@ -37,14 +37,18 @@ class ControladorEmpleat extends Controller
      */
     public function store(Request $request)
     {
-        $nouEmpleat = $request->validate([
+        $novaONG = $request->validate([
+            'cif' => 'required|max:255',
             'nom' => 'required|max:255',
-            'email' => 'required|max:255',
-            'telefon' => 'required|max:255',
+            'adreca' => 'required|max:255',
+            'poblacio' => 'required|max:255',
+            'comarca' => 'required|max:255',
+            'tipus' => 'required|max:255',
+            'utpublica' => 'required'
         ]);
-        $empleat = Empleat::create($nouEmpleat);
+        $ong = ong::create($novaONG);
 
-        return redirect('/empleats')->with('completed', 'Empleat creat!');
+        return redirect('/ongs')->with('completed', 'Nova ONG creada!');
     }
 
     /**
@@ -66,8 +70,8 @@ class ControladorEmpleat extends Controller
      */
     public function edit($id)
     {
-        $empleat = Empleat::findOrFail($id);
-        return view('empleat.actualitza', compact('empleat'));
+        $ong = ong::findOrFail($id);
+        return view('ongs.actualitza', compact('ong'));
     }
 
     /**
@@ -80,13 +84,17 @@ class ControladorEmpleat extends Controller
     public function update(Request $request, $id)
     {
         $dades = $request->validate([
+            'cif' => 'required|max:255',
             'nom' => 'required|max:255',
-            'email' => 'required|max:255',
-            'telefon' => 'required|max:255',
+            'adreca' => 'required|max:255',
+            'poblacio' => 'required|max:255',
+            'comarca' => 'required|max:255',
+            'tipus' => 'required|max:255',
+            'utpublica' => 'required'
         ]);
 
-        Empleat::whereId($id)->update($dades);
-        return redirect('/empleats')->with('completed', 'Empleat actualitzat');
+        ong::whereId($id)->update($dades);
+        return redirect('/ongs')->with('completed', 'ONG actualitzada :)');
     }
 
     /**
@@ -97,9 +105,9 @@ class ControladorEmpleat extends Controller
      */
     public function destroy($id)
     {
-        $empleat = Empleat::findOrFail($id);
-        $empleat->delete();
+        $ong = ong::findOrFail($id);
+        $ong->delete();
 
-        return redirect('/empleats')->with('completed', 'Empleat esborrat');
+        return redirect('/ongs')->with('completed', 'ONG esborrada');
     }
 }

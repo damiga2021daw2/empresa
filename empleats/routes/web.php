@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 Route::resource('empleats', ControladorEmpleat::class);
+Route::resource('ongs', ControladorONG::class);
