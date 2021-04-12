@@ -45,8 +45,9 @@
               <input type="tipus" class="form-control" name="tipus"/>
           </div>
           <div class="form-group">
-              <label for="utpublica">Utilitat Pública</label>
-              <input type="checkbox" class="form-control" name="utpublica"/>
+              <label for="utpublica">Utilitat Pública</label><br>
+              <input type="radio" name="utpublica" value="Si">Si</input>
+		          <input type="radio" name="utpublica" value="No">No</input>
           </div>
           <button type="submit" class="btn btn-block btn-primary">Envia</button>
       </form>

@@ -33,11 +33,12 @@
             <td>{{$on->poblacio}}</td>
             <td>{{$on->comarca}}</td>
             <td>{{$on->tipus}}</td>
-            @if($on->utpublica == 1)
-              <td><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fes%2Fvectors%2Ftick-mark-corregir-elecci%25C3%25B3n-signo-40143%2F&psig=AOvVaw3hZEYia-nagZo91uLnSNje&ust=1618254673826000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJCFnsry9u8CFQAAAAAdAAAAABAQ"></td>
+                        <!--@if($on->utpublica == "Si")
+              <td><img src="images/tick.webp"></td>
             @else
-              <td><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngkey.com%2Fmaxpic%2Fu2q8r5w7r5y3t4q8%2F&psig=AOvVaw123EC6CzREqIAQI_rfzPGz&ust=1618254828789000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJjg_5Pz9u8CFQAAAAAdAAAAABAL"></td>
-            @endif
+              <td><img src="images/cross.png"></td>
+            @endif-->
+            <td>{{$on->utpublica}}</td>
             <td class="text-left">
                 <a href="{{ route('ongs.edit', $on->id)}}" class="btn btn-success btn-sm">Edita</a>
                 <form action="{{ route('ongs.destroy', $on->id)}}" method="post" style="display: inline-block">

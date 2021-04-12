@@ -48,7 +48,7 @@ class ControladorONG extends Controller
             'poblacio' => 'required|max:255',
             'comarca' => 'required|max:255',
             'tipus' => 'required|max:255',
-            'utpublica' => $ut
+            'utpublica' => 'required',
         ]);
         $ong = ong::create($novaONG);
 
@@ -98,7 +98,7 @@ class ControladorONG extends Controller
             'poblacio' => 'required|max:255',
             'comarca' => 'required|max:255',
             'tipus' => 'required|max:255',
-            'utpublica' => $ut
+            'utpublica' => 'required',
         ]);
 
         ong::whereId($id)->update($dades);

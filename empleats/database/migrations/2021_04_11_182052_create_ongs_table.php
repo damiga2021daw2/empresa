@@ -21,7 +21,7 @@ class CreateOngsTable extends Migration
             $table->string('poblacio');
             $table->string('comarca');
             $table->string('tipus');
-            $table->boolean('utpublica');
+            $table->string('utpublica');
             $table->timestamps();
         });
     }
