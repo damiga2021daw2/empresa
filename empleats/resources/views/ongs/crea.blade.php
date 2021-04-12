@@ -52,5 +52,5 @@
       </form>
   </div>
 </div>
-<br><a href="{{ url('empleats') }}">Accés directe a la Llista d'ONGs</a>
+<br><a href="{{ url('ongs') }}">Accés directe a la Llista d'ONGs</a>
 @endsection

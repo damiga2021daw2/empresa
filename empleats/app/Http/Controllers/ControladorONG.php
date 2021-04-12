@@ -37,6 +37,10 @@ class ControladorONG extends Controller
      */
     public function store(Request $request)
     {
+        $ut = false;
+        if ($request->get('utpublica') == 'on') {
+            $ut = true;     
+        }
         $novaONG = $request->validate([
             'cif' => 'required|max:255',
             'nom' => 'required|max:255',
@@ -44,7 +48,7 @@ class ControladorONG extends Controller
             'poblacio' => 'required|max:255',
             'comarca' => 'required|max:255',
             'tipus' => 'required|max:255',
-            'utpublica' => 'required'
+            'utpublica' => $ut
         ]);
         $ong = ong::create($novaONG);
 
@@ -83,6 +87,10 @@ class ControladorONG extends Controller
      */
     public function update(Request $request, $id)
     {
+        $ut = false;
+        if ($request->get('utpulbica') == 'on') {
+            $ut = true;     
+        }
         $dades = $request->validate([
             'cif' => 'required|max:255',
             'nom' => 'required|max:255',
@@ -90,7 +98,7 @@ class ControladorONG extends Controller
             'poblacio' => 'required|max:255',
             'comarca' => 'required|max:255',
             'tipus' => 'required|max:255',
-            'utpublica' => 'required'
+            'utpublica' => $ut
         ]);
 
         ong::whereId($id)->update($dades);
