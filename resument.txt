@@ -1,0 +1,7 @@
+ONGs:
+	Modelo:	ong
+	BD:	ongs
+
+Usuaris:
+	Modelo: Usuari
+	BD:	usuaris

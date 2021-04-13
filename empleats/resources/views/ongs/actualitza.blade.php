@@ -45,15 +45,17 @@
                 <label for="tipus">Tipus</label>
                 <input type="text" class="form-control" name="tipus" value="{{ $ong->tipus }}" />
             </div>
-            @if($ong->utpublica == 1)
+            @if($ong->utpublica == "Si")
             <div class="form-group">
-                <label for="utpublica">Utilitat Pública</label>
-                <input checked type="checkbox" class="form-control" name="utpublica"/>
+                <label for="utpublica">Utilitat Pública</label><br>
+                <input checked type="radio" name="utpublica" value="Si">Si</input>
+		        <input type="radio" name="utpublica" value="No">No</input>
             </div>
             @else
             <div class="form-group">
-                <label for="utpublica">Utilitat Pública</label>
-                <input type="checkbox" class="form-control" name="utpublica"/>
+                <label for="utpublica">Utilitat Pública</label><br>
+                <input type="radio" name="utpublica" value="Si">Si</input>
+		        <input checked type="radio" name="utpublica" value="No">No</input>
             </div>
             @endif
 
@@ -61,5 +63,5 @@
         </form>
     </div>
 </div>
-<br><a href="{{ url('empleats') }}">Accés directe a la Llista d'empleats</a
+<br><a href="{{ url('ongs') }}">Accés directe a la Llista d'ONGs</a
 @endsection
