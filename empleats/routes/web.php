@@ -20,3 +20,4 @@ Route::get('/', function () {
 Route::resource('empleats', ControladorEmpleat::class);
 Route::resource('ongs', ControladorONG::class);
 Route::resource('usuaris', ControladorUsuari::class);
+Route::resource('socis', ControladorSoci::class);

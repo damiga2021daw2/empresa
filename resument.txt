@@ -5,3 +5,7 @@ ONGs:
 Usuaris:
 	Modelo: Usuari
 	BD:	usuaris
+
+Soci:
+	Modelo: Soci
+	BD:	socis
