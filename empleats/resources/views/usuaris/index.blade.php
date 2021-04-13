@@ -14,7 +14,6 @@
         <tr class="table-primary">
           <td># ID</td>
           <td>Username</td>
-          <td>Contrassenya</td>
           <td>Nom</td>
           <td>Cognoms</td>
           <td>Email</td>
@@ -28,7 +27,6 @@
         <tr>
             <td>{{$usr->id}}</td>
             <td>{{$usr->username}}</td>
-            <td>{{$usr->passwd}}</td>
             <td>{{$usr->nom}}</td>
             <td>{{$usr->cognoms}}</td>
             <td>{{$usr->email}}</td>
