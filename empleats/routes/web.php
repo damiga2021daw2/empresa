@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return view('login');
+});
+
+Route::get('/home', function () {
     return view('welcome');
 });
 
@@ -21,5 +25,10 @@ Route::resource('empleats', ControladorEmpleat::class);
 Route::resource('ongs', ControladorONG::class);
 Route::resource('usuaris', ControladorUsuari::class);
 Route::resource('socis', ControladorSoci::class);
+
+Route::get('/treballadors', function () {
+    return view('treballadors');
+});
+
 Route::resource('voluntaris', ControladorVoluntari::class);
 Route::resource('professionals', ControladorProfessional::class);
