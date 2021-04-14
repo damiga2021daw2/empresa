@@ -18,64 +18,64 @@
             </ul>
         </div>
         @endif
-        <form method="post" action="{{ route('voluntaris.update', $voluntari->id) }}">
+        <form method="post" action="{{ route('professionals.update', $professional->id) }}">
             <div class="form-group">
                 @csrf
                 @method('PATCH')
                 <label for="nif">NIF</label>
-                <input type="text" class="form-control" name="nif" value="{{ $voluntari->nif }}" />
+                <input type="text" class="form-control" name="nif" value="{{ $professional->nif }}" />
             </div>
             <div class="form-group">
                 <label for="nom">Nom</label>
-                <input type="text" class="form-control" name="nom" value="{{ $voluntari->nom }}" />
+                <input type="text" class="form-control" name="nom" value="{{ $professional->nom }}" />
             </div>
             <div class="form-group">
                 <label for="cognoms">Cognoms</label>
-                <input type="text" class="form-control" name="cognoms" value="{{ $voluntari->cognoms }}" />
+                <input type="text" class="form-control" name="cognoms" value="{{ $professional->cognoms }}" />
             </div>
             <div class="form-group">
                 <label for="adreca">Adreça</label>
-                <input type="text" class="form-control" name="adreca" value="{{ $voluntari->adreca }}" />
+                <input type="text" class="form-control" name="adreca" value="{{ $professional->adreca }}" />
             </div>
             <div class="form-group">
                 <label for="poblacio">Poblacio</label>
-                <input type="text" class="form-control" name="poblacio" value="{{ $voluntari->poblacio }}" />
+                <input type="text" class="form-control" name="poblacio" value="{{ $professional->poblacio }}" />
             </div>
             <div class="form-group">
                 <label for="comarca">Comarca</label>
-                <input type="text" class="form-control" name="comarca" value="{{ $voluntari->comarca }}" />
+                <input type="text" class="form-control" name="comarca" value="{{ $professional->comarca }}" />
             </div>
             <div class="form-group">
                 <label for="fixe">Telèfon Fixe</label>
-                <input type="text" class="form-control" name="fixe" value="{{ $voluntari->fixe }}" />
+                <input type="text" class="form-control" name="fixe" value="{{ $professional->fixe }}" />
             </div>
             <div class="form-group">
                 <label for="mobil">Telèfon Móbil</label>
-                <input type="text" class="form-control" name="mobil" value="{{ $voluntari->mobil }}" />
+                <input type="text" class="form-control" name="mobil" value="{{ $professional->mobil }}" />
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="text" class="form-control" name="email" value="{{ $voluntari->email }}" />
+                <input type="text" class="form-control" name="email" value="{{ $professional->email }}" />
             </div>
             <div class="form-group">
-                <label for="edat">Edat</label>
-                <input type="text" class="form-control" name="edat" value="{{ $voluntari->edat }}" />
+                <label for="carrec">Càrrec</label>
+                <input type="text" class="form-control" name="carrec" value="{{ $professional->carrec }}" />
             </div>
             <div class="form-group">
-                <label for="professio">Professio</label>
-                <input type="text" class="form-control" name="professio" value="{{ $voluntari->professio }}" />
+                <label for="pagamentSegSoc">Pagament Seguritat-Social</label>
+                <input type="text" class="form-control" name="pagamentSegSoc" value="{{ $professional->pagamentSegSoc }}" />
             </div>
             <div class="form-group">
-                <label for="horesDedicades">Hores Dedicades</label>
-                <input type="text" class="form-control" name="horesDedicades" value="{{ $voluntari->horesDedicades }}" />
+                <label for="irpfPercent">Percentatge d'IRFP</label>
+                <input type="text" class="form-control" name="irpfPercent" value="{{ $professional->irpfPercent }}" />
             </div>
             <div class="form-group">
                 <label for="nomONG">Nom de la ONG</label>
-                <input type="text" class="form-control" name="nomONG" value="{{ $voluntari->nomONG }}" />
+                <input type="text" class="form-control" name="nomONG" value="{{ $professional->nomONG }}" />
             </div>
             <button type="submit" class="btn btn-block btn-danger">Actualitza</button>
         </form>
     </div>
 </div>
-<br><a href="{{ url('voluntaris') }}">Accés directe a la Llista de Voluntaris</a
+<br><a href="{{ url('professionals') }}">Accés directe a la Llista de Professional</a
 @endsection

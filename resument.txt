@@ -9,3 +9,11 @@ Usuaris:
 Soci:
 	Modelo: Soci
 	BD:	socis
+
+Voluntari:
+	Modelo: Voluntari
+	BD:     voluntaris
+
+Professional:
+	Model: 	Professional
+	BD:	professionals

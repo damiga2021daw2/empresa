@@ -22,3 +22,4 @@ Route::resource('ongs', ControladorONG::class);
 Route::resource('usuaris', ControladorUsuari::class);
 Route::resource('socis', ControladorSoci::class);
 Route::resource('voluntaris', ControladorVoluntari::class);
+Route::resource('professionals', ControladorProfessional::class);
