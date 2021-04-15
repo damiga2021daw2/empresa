@@ -8,8 +8,21 @@
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
    </head>
    <body>
-      
-      <div class="container">
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <nav id="polla" class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="/home"><h1>Home</h1></a>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/"><h3>Logout</h3></a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+         </nav>
+      <div style="position: relative; right: 40px;" class="container">
          @yield('content')
       </div>
 

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Models\Usuari;
 
+use Session;
+
 class ControladorUsuari extends Controller
 {
     /**
@@ -54,13 +56,32 @@ class ControladorUsuari extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        $totsUsuaris = Usuari::all();
+        $usuari = $_GET['username'];
+        $contra = $_GET['passwd'];
+        //$usuari = Usuari::findOrFail($id);
+
+        foreach($totsUsuaris as $usuari){
+            if($usuari->username == $usuari){
+                if ($usuari->passwd == $contra) {
+
+                    //Session::put('usuari', $usuari);
+                    if ($usuari->admin == "Si") {
+                        return redirect('/admin'); 
+                    } else {
+                        return redirect('/home'); 
+                    }
+                } else {
+                    return redirect()->view('login')->with('error', 'Contrasenya incorrecta');
+                }
+            }
+        }
     }
+    
 
     /**
      * Show the form for editing the specified resource.
